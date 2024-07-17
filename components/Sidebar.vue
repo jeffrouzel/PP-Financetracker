@@ -1,5 +1,25 @@
+<template>
+  <div class="flex flex-col w-[250px] h-screen border-r-2 text-xs font-semibold text-gray-500 items-left pl-4">
+    <div class="flex flex-col items-center gap-2 pb-6">
+      <h1>Jeff Rouzel Bat-og</h1>
+      <h1>Super Admin</h1>
+    </div>
+
+    <tr v-for="month in months" :key="month.id" >
+        <div class="flex items-center gap-2 hover:text-blue-500 h-10">
+          <NuxtLink :to="'/month/'+ month.month">
+            <div class="hover:bg-red-600">{{month.month}}</div>
+          </NuxtLink>
+        </div>
+    </tr>
+    
+    
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const months = ref([
     { id: 1, month: "January" },
@@ -17,22 +37,3 @@ const months = ref([
 ]);
 
 </script>
-
-<template>
-  <div class="flex flex-col w-[250px] h-screen border-r-2 text-xs font-semibold text-gray-500 items-left pl-4">
-    <div class="flex flex-col items-center gap-2 pb-6">
-      <h1>Jeff Rouzel Bat-og</h1>
-      <h1>Super Admin</h1>
-    </div>
-
-    <tr v-for="month in months" :key="month.id" >
-        <div class="flex items-center gap-2 hover:text-blue-500 h-10">
-            <NuxtLink :to="'/month/'+ month.month">
-              <div class="hover:bg-red-600">{{month.month}}</div>
-            </NuxtLink>
-        </div>
-    </tr>
-    
-    
-  </div>
-</template>

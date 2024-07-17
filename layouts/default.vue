@@ -2,10 +2,11 @@
   <div class="w-screen h-screen flex flex-col">
     <!-- Navigation bar -->
     <NavigationBar />
-    <div class="h-[calc(100vh-80px)] flex">
+    <div class="h-[calc(100vh-50px)] flex">
       <!-- Sidebar -->
       <Sidebar />
-      <div class="w-screen h-screen px-24 py-16"><slot /></div>
+      <div class="size-4/6 px-6 py-8"><slot /></div> 
+      <Inputmoney />
     </div>
   </div>
-</template>
+</template> 
