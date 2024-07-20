@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@kalimahapps/vue-icons':
+        specifier: ^1.7.1
+        version: 1.7.1(vue@3.4.31)
       nuxt:
         specifier: ^3.12.3
         version: 3.12.3(@parcel/watcher@2.4.1)(@types/node@20.14.10)(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.1)(terser@5.31.1)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.1))
@@ -673,6 +676,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@kalimahapps/vue-icons@1.7.1':
+    resolution: {integrity: sha512-PXMiVTPOZ0LTU8DuIIcuOc1FyC9I9e2SMz9XUzByZZEPN8ruDCdNw2fyVCH8rcNpVSrlMlfqDT7di7tPZgH8XA==}
+    engines: {node: '>=14.16'}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@koa/router@12.0.1':
     resolution: {integrity: sha512-ribfPYfHb+Uw3b27Eiw6NPqjhIhTpVFzEWLwyc/1Xp+DCdwRRyIlAUODX+9bPARF6aQtUu1+/PHzdNvRzcs/+Q==}
@@ -3063,6 +3072,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  svg-parser@2.0.4:
+    resolution: {integrity: sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==}
+
   svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
 
@@ -3984,6 +3996,11 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@kalimahapps/vue-icons@1.7.1(vue@3.4.31)':
+    dependencies:
+      svg-parser: 2.0.4
+      vue: 3.4.31
 
   '@koa/router@12.0.1':
     dependencies:
@@ -6783,6 +6800,8 @@ snapshots:
   supports-color@9.4.0: {}
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  svg-parser@2.0.4: {}
 
   svg-tags@1.0.0: {}
 

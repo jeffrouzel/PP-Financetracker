@@ -8,7 +8,7 @@
     <tr v-for="month in months" :key="month.id" >
         <div class="flex items-center gap-2 hover:text-blue-500 h-10">
           <NuxtLink :to="'/month/'+ month.month">
-            <div class="hover:bg-red-600">{{month.month}}</div>
+            <div>{{month.month}}</div>
           </NuxtLink>
         </div>
     </tr>
@@ -19,7 +19,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
 
 const months = ref([
     { id: 1, month: "January" },
@@ -35,5 +34,4 @@ const months = ref([
     { id: 11, month: "November" },
     { id: 12, month: "December" },
 ]);
-
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ month }}</h1>
-    <!-- Add the calendar and other functionalities here -->
+    <CalendarTrack />
   </div>
 </template>
 

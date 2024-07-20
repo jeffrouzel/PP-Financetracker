@@ -12,7 +12,7 @@
         </div>
 
         <div class="flex gap-12 w-[80%] items-center pl-10 shadow-bottom">
-            <NuxtLink to="/home" class="hover:text-blue-500">Home</NuxtLink>
+            <NuxtLink to="/index" class="hover:text-blue-500">Home</NuxtLink>
             <NuxtLink to="/contact" class="hover:text-blue-500">Contact</NuxtLink>
         </div>
     </div>
