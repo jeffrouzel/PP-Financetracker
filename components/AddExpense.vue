@@ -1,8 +1,9 @@
 <template>
   <div class="p-4">
     <form @submit.prevent="addExpense" class="mb-4 flex gap-4">
-      <input v-model="newExpense.id" placeholder="ID" class="border p-2" required />
+      <!-- Input for Expense Amount -->
       <input v-model="newExpense.amount" type="number" placeholder="Amount" class="border p-2" required />
+      <!-- Dropdown for Expense Type -->
       <select v-model="newExpense.moneytype" class="border p-2" required>
         <option disabled value="">Select Money Type</option>
         <option value="Food">Food</option>
@@ -10,6 +11,7 @@
         <option value="Bills">Bills</option>
         <option value="Savings">Savings</option>
       </select>
+      <!-- Submit Button -->
       <button type="submit" class="bg-blue-500 text-white p-2 rounded">Add</button>
     </form>
     
@@ -33,10 +35,11 @@ const newExpense = ref({
 })
 
 const expenses = ref([])
+let nextId = 1
 
 const addExpense = () => {
-  expenses.value.push({ ...newExpense.value })
-  newExpense.value.id = ''
+  expenses.value.push({ ...newExpense.value, id: nextId++ })
+  expenses.value.push(expense)
   newExpense.value.amount = ''
   newExpense.value.moneytype = ''
 }
